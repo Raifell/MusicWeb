@@ -1,0 +1,14 @@
+{% extends 'library/layout.html' %}
+
+{% block title %}Bands{% endblock %}
+
+{% block content %}
+    <div class="list_box">
+        {% for band in data %}
+            <div class="item_box">
+                <h3>{{ band.name }}</h3>
+                <a href="{{ band.get_absolute_url }}">More info...</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
